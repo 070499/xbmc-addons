@@ -162,7 +162,7 @@ def GetLinks(section, url, showTitle=None, seasonNum=None, episodeNum=None, star
                     html = net.http_GET(pageUrl).content
                     html = html.replace("(","")
                     html = html.replace(")","")
-                    patron = "frameLink'(.+?)'.+?bold\">(.+?)<"
+                    patron = "frameLink'(.+?)'.+?underline\">Visit\ (.+?)<"
                     match = re.compile(patron).findall(html)
                     firstVideo = False
                     for gatewayId, host in match:
